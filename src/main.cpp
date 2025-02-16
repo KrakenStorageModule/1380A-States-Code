@@ -1,8 +1,9 @@
 #include "main.h"
 
 #include "autons.hpp"
-#include "devices.hpp"
-
+#include "driverControl.hpp"
+#include "globals.hpp"
+#include "ez-examples.hpp"
 
 /////
 // For installation, upgrading, documentations, and tutorials, check out our website!

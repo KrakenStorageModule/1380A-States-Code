@@ -1,5 +1,5 @@
 #pragma once
-
+#include "EZ-Template/util.hpp"
 #include "pros/adi.hpp"
 #include "pros/optical.hpp"
 #include "pros/rotation.hpp"
@@ -7,6 +7,7 @@
 #include "pros/motor_group.hpp"
 #include "pros/misc.hpp"
 #include "EZ-Template/api.hpp"
+
 
 // Controllers
 extern pros::Controller controller;
@@ -40,9 +41,6 @@ extern std::string tempReturn;
 extern ez::Drive chassis;
 extern ez::tracking_wheel horiz_tracker;
 
-// Temperature Controller Display
-extern void controllerHud();
-
 // LADY BROWN CODE
 extern const int numStates;
 extern int states[];
@@ -59,15 +57,13 @@ extern double output;
 extern bool tippingVar;
 extern bool untipVar;
 extern int color;
+extern bool colorSortToggle;
 void backState();
 void nextState();
 void untipState();
 void tippingState();
 void armDriver();
 
-// PISTON CODE
-void pneumaticDriverControl();
-
-// Intake control
-void intakeDriver();
-void intakeControl();
+extern const int DRIVE_SPEED;
+extern const int TURN_SPEED;
+extern const int SWING_SPEED;
